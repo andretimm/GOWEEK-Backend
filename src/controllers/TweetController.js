@@ -10,6 +10,10 @@ module.exports = {
 
     async store(req, res){
         const tweet = await Tweet.create(req.body);
+
+        //Dispara evento, avisando que foi criado um novo tweet
+        req.io.emit('tweet', tweet);
+
         return res.json(tweet);
     }
 };
