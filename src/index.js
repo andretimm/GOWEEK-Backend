@@ -13,7 +13,7 @@ const io = require('socket.io')(server);
 
 //Conecta banco de dados
 mongoose.connect(
-    "mongodb://goweek:goweek123@ds047468.mlab.com:47468/goweek-backend",
+    "mongodb://<user>:<pass>@ds047468.mlab.com:47468/goweek-backend",
     {
         useNewUrlParser: true
     }
